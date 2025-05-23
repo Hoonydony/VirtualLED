@@ -1,4 +1,4 @@
-This virtual LED demo visualizes the real-time signal status of a virtual GPIO on an Arm Cortex-A53(virt) using QEMU and GDB.
+This virtual LED demo visualizes the real-time signal status of a virtual GPIO on an Arm Cortex-A53(AArch64, virt) using QEMU and GDB.
 It reads signal values from the emulated hardware registers and displays them as a graph and the LED indicator shows the LED's status through turning on a red light when it receives ON signal.
 The system continuously fetches data via GDB remote debugging for live monitoring as per your system performance, while the signal fluctuates repeatedly on the virtual device.
 This provides an interactive way to observe and analyze GPIO signal behavior during emulation.
@@ -14,7 +14,7 @@ You need
 - Python 3 with matplotlib and pexpect libraries.
 
 Notes:
-Works best on macOS and Linux.
+It works best on macOS and Linux.
 The python app connects to the virtual device through the remote GDB port(localhost:1234) that should be available.
    
 
