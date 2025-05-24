@@ -1,7 +1,7 @@
 This virtual LED demo visualizes the real-time signal status of a virtual GPIO on an Arm Cortex-A53(AArch64, virt) using QEMU and GDB.
 It reads signal values from the emulated hardware registers and displays them as a graph and the LED indicator shows the LED's status through turning on a red light when it receives ON signal.
-The system continuously fetches data via GDB remote debugging for live monitoring as per your system performance, while the signal fluctuates repeatedly on the virtual device.
-This provides an interactive way to observe and analyze GPIO signal behavior during emulation.
+The system continuously fetches data via GDB remote debugging for live monitoring as per your system performance, while the signal fluctuates between 0 and 1 repeatedly on the virtual device.
+This provides an interactive way to observe and analyze I/O register(memory-mapped at 0x40010000) signal behavior during emulation.
 
 How to run the demo:
 1. compile the source: aarch64-none-elf-gcc -g -nostdlib -T linker.ld -march=armv8-a -mcpu=cortex-a53 main.c -o main.elf
